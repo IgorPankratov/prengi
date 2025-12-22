@@ -1,0 +1,42 @@
+{
+  "name": "prengi",
+  "version": "1.0.0",
+  "description": "landing page",
+  "homepage": "https://github.com/IgorPankratov/prengi#readme",
+  "bugs": {
+    "url": "https://github.com/IgorPankratov/prengi/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IgorPankratov/prengi.git"
+  },
+  "license": "ISC",
+  "author": "IPank",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp",
+    "clean": "rimraf dist",
+    "build": "npm run clean && gulp styles && gulp scripts && gulp fonts && gulp icons && gulp html && gulp images",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.4",
+    "gulp": "^5.0.1",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-cli": "^3.1.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^9.2.0",
+    "gulp-rename": "^2.1.0",
+    "gulp-sass": "^6.0.1",
+    "rimraf": "^6.1.2",
+    "sass": "^1.97.1"
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "maintained node versions",
+    "not dead"
+  ]
+}
