@@ -12,16 +12,14 @@ const rimraf = require("rimraf");
 const paths = {
   src: "src",
   dist: "dist",
-  sass: "src/sass/**/*.+(scss|sass)",
+  sass: "src/scss/**/*.+(scss|sass)",
   html: "src/*.html",
   js: "src/js/**/*.js",
   fonts: "src/fonts/**/*",
   icons: "src/icons/**/*",
   img: "src/img/**/*.{jpg,jpeg,png,svg,gif}",
-  mailer: "src/mailer/**/*"
+  mailer: "src/mailer/**/*",
 };
-
-
 
 // Таск для очистки dist
 gulp.task("clean", (cb) => {
@@ -44,9 +42,9 @@ gulp.task("clean", (cb) => {
 gulp.task("html", function () {
   return gulp
     .src(paths.html)
+    .on("error", console.error)
     .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest(paths.dist))
-    .on("error", console.error);
+    .pipe(gulp.dest(paths.dist));
 });
 
 // Таск для стилей
@@ -66,31 +64,31 @@ gulp.task("styles", function () {
 gulp.task("scripts", function () {
   return gulp
     .src(paths.js)
-    .pipe(gulp.dest(`${paths.dist}/js`))
-    .on("error", console.error);
+    .on("error", console.error)
+    .pipe(gulp.dest(`${paths.dist}/js`));
 });
 
 // Таски для статических ресурсов
 gulp.task("fonts", function () {
   return gulp
     .src(paths.fonts)
-    .pipe(gulp.dest(`${paths.dist}/fonts`))
-    .on("error", console.error);
+    .on("error", console.error)
+    .pipe(gulp.dest(`${paths.dist}/fonts`));
 });
 
 gulp.task("icons", function () {
   return gulp
     .src(paths.icons)
-    .pipe(gulp.dest(`${paths.dist}/icons`))
-    .on("error", console.error);
+    .on("error", console.error)
+    .pipe(gulp.dest(`${paths.dist}/icons`));
 });
 
-gulp.task("mailer", function () {
-  return gulp
-    .src(paths.mailer)
-    .pipe(gulp.dest(`${paths.dist}/mailer`))
-    .on("error", console.error);
-});
+// gulp.task("mailer", function () {
+//   return gulp
+//     .src(paths.mailer)
+//     .on("error", console.error)
+//     .pipe(gulp.dest(`${paths.dist}/mailer`));
+// });
 
 // Таск для изображений
 gulp.task("images", function () {
@@ -99,7 +97,7 @@ gulp.task("images", function () {
     .pipe(
       imagemin([
         imagemin.mozjpeg({ quality: 75 }),
-        imagemin.pngquant({ quality: [0.65, 0.8] }),
+        imagemin.optipng({ optimizationLevel: 5 }),
         imagemin.svgo(),
       ])
     )
@@ -112,7 +110,7 @@ gulp.task("server", function () {
   browserSync.init({
     server: { baseDir: "dist" },
     port: 5000,
-    host: "0.0.0.0",
+    host: "localhost",
     open: true,
     ui: false,
   });
@@ -126,14 +124,13 @@ gulp.task("watch", function () {
   gulp.watch(paths.js, gulp.series("scripts"));
   gulp.watch(paths.fonts, gulp.series("fonts"));
   gulp.watch(paths.icons, gulp.series("icons"));
-  gulp.watch(pathas.img, gulp.series("images"));
+  gulp.watch(paths.img, gulp.series("images"));
 });
 
 // Сборка и запуск
 gulp.task(
   "build",
   gulp.series(
-    "clean",
     (cb) => {
       if (!fs.existsSync("src")) {
         console.error("Папка src/ не найдена!");
@@ -141,19 +138,20 @@ gulp.task(
       }
       cb();
     },
+    "clean",
     "styles",
     "html",
     "scripts",
     "fonts",
     "icons",
     "images",
-    "mailer"
+    // "mailer"
   )
 );
 
 gulp.task("default", gulp.parallel("build", "watch", "server"));
 
-//Таск для документации 
+//Таск для документации
 gulp.task("help", (cb) => {
   console.log(`
     Доступные команды:
