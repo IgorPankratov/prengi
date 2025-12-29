@@ -78,7 +78,7 @@ gulp.task("fonts", function () {
 
 gulp.task("icons", function () {
   return gulp
-    .src(paths.icons)
+    .src(paths.icons, { encoding: false })
     .on("error", console.error)
     .pipe(gulp.dest(`${paths.dist}/icons`));
 });
@@ -93,7 +93,7 @@ gulp.task("icons", function () {
 // Таск для изображений
 gulp.task("images", function () {
   return gulp
-    .src(paths.img)
+    .src(paths.img, { encoding: false })
     .pipe(
       imagemin([
         imagemin.mozjpeg({ quality: 75 }),
