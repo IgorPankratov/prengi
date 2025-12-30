@@ -16,7 +16,7 @@ const paths = {
   html: "src/*.html",
   js: "src/js/**/*.js",
   fonts: "src/fonts/**/*",
-  icons: "src/icons/**/*.{jpg,jpeg,png,svg,gif,webP}",
+  icons: "src/icons/**/*.{jpg,jpeg,png,svg,gif,webP,json,xml,ico}",
   img: "src/img/**/*.{jpg,jpeg,png,svg,gif,webP}",
   mailer: "src/mailer/**/*",
 };
