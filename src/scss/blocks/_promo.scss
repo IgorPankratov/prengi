@@ -1,0 +1,24 @@
+.promo {
+  padding: 40px 0 0 0;
+  background: url("../../img/promo/promo_bg.jpg") center (center/cover)
+    no-repeat;
+  &__nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+  &__siteGuide {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      list-style-type: none;
+      li {
+        font-size: 13px;
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 2;
+      }
+    }
+  }
+}
