@@ -1,4 +1,5 @@
 .promo {
+  min-height: 700px;
   padding: 40px 0 0 0;
   background: url("../../img/promo/promo_bg.jpg") center (center/cover)
     no-repeat;
@@ -21,4 +22,44 @@
       }
     }
   }
+  &__wrapper {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+  }
+  &__header {
+    margin-top: 106px;
+    color: rgb(255, 255, 255);
+    h1 {
+      font-size: 42px;
+      line-height: 1.143;
+    }
+    h2 {
+      margin-top: 30px;
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 1.25;
+    }
+    button {
+      margin-top: 45px;
+      font-size: 16px;
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height: 1.875;
+      background-color: #00c2f0;
+      border: none;
+    }
+  }
 }
+
+// .Rounded_Rectangle_5 {
+//   background-image: url("Rounded Rectangle 5.png");
+//   position: absolute;
+//   left: 385px;
+//   top: 524px;
+//   width: 254px;
+//   height: 73px;
+//   z-index: 188;
+// }
