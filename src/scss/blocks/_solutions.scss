@@ -1,0 +1,47 @@
+.solutions {
+  padding-top: 80px;
+  min-height: 890px;
+  background: url("../../img/solutions/solutions_bg.jpg") center
+    (center / cover) no-repeat;
+  &__header {
+    margin: 0 auto;
+    max-width: 660px;
+    text-align: center;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 1.2;
+    color: rgb(255, 255, 255);
+  }
+  &__tabs {
+    max-width: 840px;
+    height: 60px;
+    margin: 30px auto;
+    padding: 5px 0;
+    border: 1px rgb(255, 255, 255) solid;
+    ul {
+      width: 100%;
+      display: inline-flex;
+      list-style-type: none;
+      padding-left: 0;
+      li {
+        justify-self: center;
+        min-width: 125px;
+        padding: 15px 20px;
+        text-align: center;
+        border-right: 1px rgb(255, 255, 255) dotted;
+        font-size: 14px;
+        line-height: 20px;
+        color: rgb(255, 255, 255);
+        &:last-child {
+          border-right: none;
+        }
+        a {
+          &:hover {
+            font-weight: 900;
+            color: $mainColor;
+          }
+        }
+      }
+    }
+  }
+}
