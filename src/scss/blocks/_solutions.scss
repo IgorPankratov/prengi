@@ -1,5 +1,5 @@
 .solutions {
-  padding-top: 80px;
+  padding: 80px 0px;
   min-height: 890px;
   background: url("../../img/solutions/solutions_bg.jpg") center
     (center / cover) no-repeat;
@@ -42,6 +42,37 @@
           }
         }
       }
+    }
+  }
+  .slider {
+    border: 2px blue solid;
+    position: relative;
+    margin-top: 60px;
+    overflow: hidden;
+    &__inner {
+      border: 2px red solid;
+      display: flex;
+    }
+    &__item {
+      flex: 0 0 100%;
+      transition: transform ease-in 2s;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    button {
+      position: absolute;
+      top: 50%; 
+      transform: translateY(-50%);
+      background-color: rgba($color: #000000, $alpha: 0);
+      border: none;
+    }
+    &__prev {
+      left: 10px;
+    }
+    &__next {
+      right: 10px;
     }
   }
 }
