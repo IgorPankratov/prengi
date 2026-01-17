@@ -1,0 +1,70 @@
+.contacts {
+  padding: 80px 0px;
+  &__image {
+    margin: 0 auto;
+    max-width: 300px;
+    max-height: 300px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__header {
+    margin: 75px auto 0px;
+    font-size: 30px;
+    font-weight: 900;
+    color: rgb(57, 57, 57);
+    line-height: 1.2;
+    text-align: center;
+    // width: 585px;
+    // height: 64px;
+  }
+  &__btn {
+    display: block;
+    margin: 30px auto 0px;
+    border: none;
+    border-radius: 10px;
+    width: 254px;
+    height: 73px;
+    background: $mainColor;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.875;
+  }
+}
+// .Приступить_очень_просто__Нужно_получить_доступ_ {
+//   font-size: 30px;
+//   font-family: "Roboto";
+//   color: rgb(57, 57, 57);
+//   line-height: 1.2;
+//   text-align: center;
+//   position: absolute;
+//   left: 487.672px;
+//   top: 4971.336px;
+//   width: 585px;
+//   height: 64px;
+//   z-index: 13;
+// }
+// .Rounded_Rectangle_5_copy {
+//   background-image: url("Rounded Rectangle 5 copy.png");
+//   position: absolute;
+//   left: 834px;
+//   top: 5028px;
+//   width: 254px;
+//   height: 73px;
+//   z-index: 15;
+// }
+// .связаться_с_нами {
+//   font-size: 16px;
+//   font-family: "Roboto";
+//   color: rgb(255, 255, 255);
+//   font-weight: bold;
+//   text-transform: uppercase;
+//   line-height: 1.875;
+//   position: absolute;
+//   left: 882.328px;
+//   top: 5049px;
+//   z-index: 16;
+// }
