@@ -1,6 +1,7 @@
 @import "libs/bootstrap-reboot.min";
 @import "libs/fonts";
 @import "base/variables";
+@import "base/mixins";
 
 * {
     font-family: 'Roboto';
@@ -24,3 +25,4 @@ a {
 @import "blocks/schema";
 @import "blocks/contacts";
 @import "blocks/footer";
+@import "blocks/modal";
