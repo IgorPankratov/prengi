@@ -34,3 +34,10 @@ consultationBtn.forEach((item) => {
     document.querySelector(".modal").style.display = "block";
   });
 });
+
+closeModal.addEventListener("click", () => {
+  document.querySelector(".overlay").style.display = "none";
+  document.querySelector(".modal").style.display = "none";
+});
+
+// Mailer 
