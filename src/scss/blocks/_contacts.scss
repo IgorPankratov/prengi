@@ -20,18 +20,7 @@
     // height: 64px;
   }
   &__btn {
-    display: block;
-    margin: 30px auto 0px;
-    border: none;
-    border-radius: 10px;
-    width: 254px;
-    height: 73px;
-    background: $mainColor;
-    color: white;
-    font-size: 16px;
-    font-weight: 700;
-    text-transform: uppercase;
-    line-height: 1.875;
+    @include button;
   }
 }
 // .Приступить_очень_просто__Нужно_получить_доступ_ {
