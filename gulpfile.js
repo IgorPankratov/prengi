@@ -83,12 +83,12 @@ gulp.task("icons", function () {
     .pipe(gulp.dest(`${paths.dist}/icons`));
 });
 
-// gulp.task("mailer", function () {
-//   return gulp
-//     .src(paths.mailer)
-//     .on("error", console.error)
-//     .pipe(gulp.dest(`${paths.dist}/mailer`));
-// });
+gulp.task("mailer", function () {
+  return gulp
+    .src(paths.mailer)
+    .on("error", console.error)
+    .pipe(gulp.dest(`${paths.dist}/mailer`));
+});
 
 // Таск для изображений
 gulp.task("images", function () {
@@ -145,7 +145,7 @@ gulp.task(
     "fonts",
     "icons",
     "images",
-    // "mailer"
+    "mailer"
   )
 );
 

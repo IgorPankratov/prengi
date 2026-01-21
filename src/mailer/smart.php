@@ -23,18 +23,18 @@ $mail->CharSet = 'UTF-8';
 
 // Включите для отладки (уберите после теста!)
 $mail->SMTPDebug = 2;
-$mail->Debugoutput = 'html';                            // Enable verbose debug output
+$mail->Debugoutput = 'html';                          // Enable verbose debug output
 
 $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.yandex.ru';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'megapankrat@yandex.ru';                 // Наш логин
-$mail->Password = '';                           // Наш пароль от ящика либо пароль приложения
+$mail->Username = 'megapankrat@yandex.ru';            // Наш логин
+$mail->Password = 'tcduedcdyhvvhsot';                 // Наш пароль от ящика либо пароль приложения
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
  
 $mail->setFrom('megapankrat@yandex.ru', 'Prengi');   // От кого письмо 
-$mail->addAddress('megapankrat@yandex.ru');     // Add a recipient
+$mail->addAddress('megapankrat@yandex.ru');     // Add a recipient ; Кому письмо
 //$mail->addAddress('ellen@example.com');               // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
 //$mail->addCC('cc@example.com');
