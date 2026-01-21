@@ -24,7 +24,7 @@ nextBtn.addEventListener("click", () => {
 // Modal
 
 const consultationBtn = document.querySelectorAll(
-  '[data-modal="consultation"]'
+  '[data-modal="consultation"]',
 );
 const closeModal = document.querySelector(".modal__close");
 
@@ -40,5 +40,40 @@ closeModal.addEventListener("click", () => {
   document.querySelector(".modal").style.display = "none";
 });
 
-// Mailer 
+// Mailer
 
+const contactsForm = document.querySelector(".modal__form");
+
+contactsForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+  const formData = new FormData(this);
+
+  //validation
+
+  const name = this.querySelector('[name="name"]').value;
+  const phone = this.querySelector('[name="phone"]').value;
+  const email = this.querySelector('[name="email"]').value;
+
+  if (!name || !phone || !email) {
+    console.log("Заполните все поля");
+    return;
+  }
+
+  // Sent query
+
+  fetch("../mailer/smart.php", {
+    method: "POST",
+    body: formData,
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data.success) {
+        console.log("Сообщение отправлено");
+      } else {
+        console.log(`Сообщение не отправлено ${data.error}`);
+      }
+    })
+    .catch((error) => {
+      console.log(`Ошибка сети. ${error.message}`);
+    });
+});
