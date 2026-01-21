@@ -76,4 +76,9 @@ contactsForm.addEventListener("submit", function (e) {
     .catch((error) => {
       console.log(`Ошибка сети. ${error.message}`);
     });
+
+  // Close modal
+
+  document.querySelector(".overlay").style.display = "none";
+  document.querySelector(".modal").style.display = "none";
 });
