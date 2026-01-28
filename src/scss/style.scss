@@ -7,8 +7,9 @@
     font-family: 'Roboto';
 }
 .container {
-    margin: 0 auto;
-    width: 1140px;
+    margin: 0 20px;
+    padding: 0 20px;
+    max-width: 1140px;
     // background: rgba(157, 230, 181, 0.5);
 }
 
@@ -26,3 +27,4 @@ a {
 @import "blocks/contacts";
 @import "blocks/footer";
 @import "blocks/modal";
+@import "blocks/media";

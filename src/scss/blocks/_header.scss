@@ -2,7 +2,7 @@
   padding: 20px 0;
   &__wrapper {
     display: grid;
-    grid-template-columns: repeat(5, minmax(200px, auto));
+    grid-template-columns: repeat(5, minmax(auto, auto));
     grid-template-rows: auto;
   }
   &__item {
