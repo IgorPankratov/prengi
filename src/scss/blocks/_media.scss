@@ -28,4 +28,28 @@
       }
     }
   }
+  .schema {
+    .container {
+      transform: translateX(52%);
+    }
+  }
+  .contacts {
+    &__btn {
+      width: 210px;
+      height: 50px;
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .promo {
+    &__nav {
+      grid-template-columns: 1fr 3fr;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  
 }
