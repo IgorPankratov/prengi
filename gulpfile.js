@@ -71,7 +71,7 @@ gulp.task("scripts", function () {
 // Таски для статических ресурсов
 gulp.task("fonts", function () {
   return gulp
-    .src(paths.fonts)
+    .src(paths.fonts, { encoding: false })
     .on("error", console.error)
     .pipe(gulp.dest(`${paths.dist}/fonts`));
 });
