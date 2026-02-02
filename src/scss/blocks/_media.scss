@@ -51,5 +51,14 @@
 }
 
 @media (max-width: 768px) {
+  .header {
+    &__wrapper {
+      grid-template-columns: repeat(3, minmax(auto, auto));
+      column-gap: 5px;
+    }
+    &__itemText {
+      font-size: 10px;
+    }
+  }
   
 }

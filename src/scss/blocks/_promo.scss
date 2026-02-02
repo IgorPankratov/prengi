@@ -1,8 +1,23 @@
 .promo {
+  position: relative;
   min-height: 700px;
   padding: 40px 0 0 0;
   background: url("../../img/promo/promo_bg.jpg") center (center/cover)
     no-repeat;
+  .humburger {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 40px;
+    span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      margin-top: 5px;
+      background: $mainColor;
+    }
+  }
   &__nav {
     display: grid;
     grid-template-columns: 1fr 1fr;
