@@ -25,6 +25,22 @@
       font-size: 32px;
       cursor: pointer;
     }
+    ul {
+      list-style-type: none;
+      li {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 2;
+        a {
+          &:hover {
+            color: $mainColor;
+          }
+        }
+      }
+    }
     form {
       display: grid;
       grid-template-columns: minmax(300, auto);

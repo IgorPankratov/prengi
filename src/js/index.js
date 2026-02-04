@@ -26,7 +26,7 @@ nextBtn.addEventListener("click", () => {
 const consultationBtn = document.querySelectorAll(
   '[data-modal="consultation"]',
 );
-const closeModal = document.querySelector(".modal__close");
+const closeModal = document.querySelectorAll(".modal__close");
 
 consultationBtn.forEach((item) => {
   item.addEventListener("click", () => {
@@ -35,9 +35,11 @@ consultationBtn.forEach((item) => {
   });
 });
 
-closeModal.addEventListener("click", () => {
-  document.querySelector(".overlay").style.display = "none";
-  document.querySelector(".modal").style.display = "none";
+closeModal.forEach((item) => {
+  item.addEventListener("click", () => {
+    document.querySelector(".overlay").style.display = "none";
+    document.querySelector(".modal").style.display = "none";
+  });
 });
 
 // Mailer
@@ -81,4 +83,14 @@ contactsForm.addEventListener("submit", function (e) {
 
   document.querySelector(".overlay").style.display = "none";
   document.querySelector(".modal").style.display = "none";
+});
+
+// Humburger menu
+
+const humburger = document.querySelector(".humburger");
+const modalNavigation = document.querySelector("#navigation");
+
+humburger.addEventListener("click", () => {
+  document.querySelector(".overlay").style.display = "block";
+  document.querySelector("#navigation").style.display = "block";
 });

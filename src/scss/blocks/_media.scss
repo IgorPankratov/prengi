@@ -60,5 +60,65 @@
       font-size: 10px;
     }
   }
-  
+  .promo {
+    .humburger {
+      display: flex;
+    }
+    &__siteGuide {
+      display: none;
+    }
+  }
+  .withPrengi {
+    &__wrapper {
+      grid-template-columns: 1fr;
+      row-gap: 10px;
+    }
+  }
+  .solutions {
+    min-height: 400px;
+    background: url("../../img/solutions/solutions_bg_634.webP") center
+      (center / cover) no-repeat;
+    &__tabs {
+      ul {
+        li {
+          min-width: unset;
+          font-size: 10px;
+        }
+      }
+    }
+  }
+  .advantages {
+    &__item {
+      &_text {
+        padding: 20px;
+        height: 100px;
+        font-size: 14px;
+      }
+    }
+  }
+  .schema {
+    .header {
+      font-size: 24px;
+    }
+    .text {
+      font-size: 14px;
+    }
+  }
+
+  .footer {
+    &__wrapper {
+      grid-template-columns: 1fr;
+    }
+    &__item {
+      text-align: center;
+      padding-right: unset;
+      ul {
+        li {
+          img {
+            margin: 20px auto;
+          }
+        }
+      }
+    }
+  }
 }
