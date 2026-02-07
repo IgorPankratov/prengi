@@ -31,7 +31,7 @@ const closeModal = document.querySelectorAll(".modal__close");
 consultationBtn.forEach((item) => {
   item.addEventListener("click", () => {
     document.querySelector(".overlay").style.display = "block";
-    document.querySelector(".modal").style.display = "block";
+    document.getElementById("consultation").style.display = "block";
   });
 });
 
@@ -92,5 +92,5 @@ const modalNavigation = document.querySelector("#navigation");
 
 humburger.addEventListener("click", () => {
   document.querySelector(".overlay").style.display = "block";
-  document.querySelector("#navigation").style.display = "block";
+  document.getElementById("navigation").style.display = "block";
 });
