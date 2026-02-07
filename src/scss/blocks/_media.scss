@@ -53,8 +53,9 @@
 @media (max-width: 768px) {
   .header {
     &__wrapper {
-      grid-template-columns: repeat(3, minmax(auto, auto));
-      column-gap: 5px;
+      grid-template-columns: repeat(2, minmax(auto, auto));
+      gap: 5px;
+      justify-content: center;
     }
     &__itemText {
       font-size: 10px;
@@ -119,6 +120,102 @@
           }
         }
       }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .promo {
+    h2 {
+      font-size: 30px;
+    }
+    h1 {
+      font-size: 17px;
+    }
+  }
+  .withPrengi {
+    &__midLine {
+      &_text {
+        font-size: 30px;
+      }
+    }
+  }
+  .solutions {
+    &__tabs {
+      height: auto;
+      ul {
+        display: block;
+        margin: 0;
+        li {
+          border-right: unset;
+        }
+      }
+    }
+    .slider {
+      &__prev {
+        left: 0;
+      }
+      &__next {
+        right: 0;
+      }
+    }
+  }
+  .advantages {
+    &__header {
+      width: auto;
+    }
+    &__wrapper {
+      grid-template: auto / auto;
+    }
+  }
+  .schema {
+    .wrapper {
+      flex-direction: column;
+      &__left {
+        width: auto;
+        height: 350px;
+      }
+      &__right {
+        width: auto;
+        height: 350px;
+      }
+    }
+    &__header {
+      margin: 42px auto;
+      font-size: 24px;
+    }
+    &__items {
+      margin: 0 auto;
+      grid-template: auto / auto;
+      gap: 50px;
+      .header {
+        font-size: 20px;
+      }
+    }
+    &__cloud {
+      text-align: center;
+      &:after {
+        top: 0px;
+        right: 5px;
+      }
+      h2 {
+        font-size: 20px;
+      }
+    }
+    &__server {
+      text-align: center;
+      &:after {
+        top: 15px;
+        left: 5px;
+      }
+      h2 {
+        font-size: 20px;
+      }
+    }
+  }
+  .contacts {
+    &__header {
+      font-size: 25px;
     }
   }
 }
