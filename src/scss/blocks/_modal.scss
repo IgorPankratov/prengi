@@ -8,26 +8,28 @@
   .modal {
     display: none;
     position: absolute;
-    padding: 80px 40px;
-    border-radius: 10px;
+    padding: 40px 40px;
+    border-radius: 20px;
     border: none;
     background: rgba(255, 255, 255, 0.8);
-    top: 50%;
+    top: 20px;
     left: 50%;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    min-height: 400px;
+    transform: translate(-50%);
+    width: auto;
+    height: auto;
     &__close {
       position: absolute;
       top: 0;
-      right: 10px;
+      right: 20px;
       color: $mainColor;
       font-size: 32px;
       cursor: pointer;
     }
-    ul {
+    &__list {
       display: none;
       list-style-type: none;
+      margin: 0;
+      padding: 0;
       li {
         text-align: center;
         margin-top: 10px;
@@ -42,11 +44,11 @@
         }
       }
     }
-    form {
-      display: grid;
+    &__form {
+      display: none;
       grid-template-columns: minmax(300, auto);
       grid-template-rows: repeat(4, 60px);
-      row-gap: 40px;
+      row-gap: 20px;
       input {
         padding: 5px 10px;
         border-radius: 10px;
